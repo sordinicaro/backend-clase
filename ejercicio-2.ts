@@ -53,7 +53,7 @@ const persons: unknown = [
 	},
 ];
 
-function logPerson(user: unknown) {
+function logPerson2(user: unknown) {
 	console.log(` - ${user.name}, ${user.age}`);
 }
 
