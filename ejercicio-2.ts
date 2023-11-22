@@ -28,9 +28,9 @@ interface Admin {
 	role: string;
 }
 
-type Person = unknown;
+type Person = NormalUser | Admin;
 
-const persons: unknown = [
+const persons: Person[] = [
 	{
 		name: 'Max Mustermann',
 		age: 25,
@@ -53,11 +53,11 @@ const persons: unknown = [
 	},
 ];
 
-function logPerson2(user: unknown) {
+function logPerson2(user: Person) {
 	console.log(` - ${user.name}, ${user.age}`);
 }
 
-persons.forEach(logPerson);
+persons.forEach(logPerson2);
 
 // En caso de que estés trabada:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
